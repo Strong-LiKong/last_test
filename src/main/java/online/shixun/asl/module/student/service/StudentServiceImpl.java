@@ -24,9 +24,38 @@ public class StudentServiceImpl {
 		return studentDao.getStudents();
 
 	}
-	
-	public void saveStudent(StudentDTO student){
-		
+
+	public void saveStudent(StudentDTO student) {
+
 		studentDao.saveStudent(student);
+	}
+
+	public List<StudentDTO> getJavaStudents() {
+		return studentDao.getJavaStudents();
+	}
+
+	public List<StudentDTO> getDataStudents() {
+
+		return studentDao.getDataStudents();
+	}
+
+	public List<StudentDTO> getTestStudents() {
+
+		return studentDao.getTestStudents();
+	}
+
+	public List<StudentDTO> getWebStudents() {
+
+		return studentDao.getWebStudents();
+	}
+
+	public List<StudentDTO> getMaleStudents() {
+
+		return studentDao.getMaleStudents();
+	}
+
+	public List<StudentDTO> getFemaleStudents() {
+
+		return studentDao.getFemaleStudents();
 	}
 }

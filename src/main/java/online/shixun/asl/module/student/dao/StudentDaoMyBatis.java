@@ -20,6 +20,15 @@ public interface StudentDaoMyBatis {
 	 */
 	List<StudentDTO> getStudents();
 	
+	List<StudentDTO> getJavaStudents();
+	
+	List<StudentDTO> getDataStudents();
+	List<StudentDTO> getTestStudents();
+	List<StudentDTO> getWebStudents();
+	
+	List<StudentDTO> getMaleStudents();
+	List<StudentDTO> getFemaleStudents();
+	
 	
 	/**
 	 * 新增

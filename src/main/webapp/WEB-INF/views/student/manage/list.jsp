@@ -5,6 +5,23 @@
 	<div class="toolbar-menu-panel">
 		<button class="btn btn-bg add-student-btn">添加</button>
 	</div>
+	<br><br>
+	<div class="direction_btn">
+	方向：
+	<button class="btn btn-bg all-student-btn">全部</button>
+	<button class="btn btn-bg java-student-btn">Java开发</button>
+	<button class="btn btn-bg test-student-btn">软件测试</button>
+	<button class="btn btn-bg data-student-btn">大数据</button>
+	<button class="btn btn-bg web-student-btn">web前端</button>
+	</div>
+	<br><br>
+	<div class="gender_btn">
+	性别：
+	<button class="btn btn-bg allgener-student-btn">全部</button>
+	<button class="btn btn-bg male-student-btn">男</button>
+	<button class="btn btn-bg female-student-btn">女</button>
+	
+	</div>
 	<div class="real-content-panel">
 		<table class="table table-stripe table-hover">
 			<thead>
@@ -76,6 +93,43 @@
 			
 			// 如果全部被选中，则反选，否则全选
 			$studentManageListPanel.find(".student-item-id").prop("checked", !isChecked);
+		});
+		
+		 // 查寻所有
+		$(".all-student-btn").on("click", function() {
+			loadMainContent("/student/manage/list");
+		});
+		
+		// 查寻java
+		$(".java-student-btn").on("click", function() {
+			loadMainContent("/student/manage/java");
+		});
+		
+		// 查寻大数据
+		$(".data-student-btn").on("click", function() {
+			loadMainContent("/student/manage/data");
+		});
+		
+		// 查寻web
+		$(".web-student-btn").on("click", function() {
+			loadMainContent("/student/manage/web");
+		});
+		
+		// 查寻测试
+		$(".test-student-btn").on("click", function() {
+			loadMainContent("/student/manage/test");
+		});
+		// 查寻男生
+		$(".male-student-btn").on("click", function() {
+			loadMainContent("/student/manage/male");
+		});
+		// 查寻女生
+		$(".female-student-btn").on("click", function() {
+			loadMainContent("/student/manage/female");
+		});
+		// 查寻女生
+		$(".allgener-student-btn").on("click", function() {
+			loadMainContent("/student/manage/list");
 		});
 		
 		

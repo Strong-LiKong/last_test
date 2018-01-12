@@ -2,7 +2,7 @@
 
 <mapper namespace="online.shixun.asl.module.student.dao.StudentDaoMyBatis">
 
-	<!-- 获取部门列表 -->
+	<!-- 获取列表 -->
 	<select id="getStudents" resultType="StudentDTO" >
 		SELECT
 			*
@@ -11,7 +11,68 @@
 	</select>
 	
 	
-	<!-- 新增或更新部门 -->
+
+	<select id="getJavaStudents" resultType="StudentDTO" >
+		SELECT
+			*
+		FROM
+			db_student
+		WHERE
+		    direction="Java"
+	</select>
+	
+
+	<select id="getDataStudents" resultType="StudentDTO" >
+		SELECT
+			*
+		FROM
+			db_student
+		WHERE
+		    direction="大数据"
+	</select>
+	
+
+	<select id="getTestStudents" resultType="StudentDTO" >
+		SELECT
+			*
+		FROM
+			db_student
+		WHERE
+		    direction="软件测试"
+	</select>
+	
+	
+
+	<select id="getWebStudents" resultType="StudentDTO" >
+		SELECT
+			*
+		FROM
+			db_student
+		WHERE
+		    direction="Web前端"
+	</select>
+	
+
+	<select id="getMaleStudents" resultType="StudentDTO" >
+		SELECT
+			*
+		FROM
+			db_student
+		WHERE
+		    gener="男"
+	</select>
+	
+	<!-- 获取部门列表 -->
+	<select id="getFemaleStudents" resultType="StudentDTO" >
+		SELECT
+			*
+		FROM
+			db_student
+		WHERE
+		    gener="女"
+	</select>
+	
+	<!-- 新增   -->
 	<insert id="saveStudent">
 		INSERT INTO db_student(
 			id,

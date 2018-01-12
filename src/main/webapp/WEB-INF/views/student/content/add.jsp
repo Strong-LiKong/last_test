@@ -25,8 +25,17 @@
 			<label class="input-label">专业</label> <input name="object" class="input-content" type="text" placeholder="请输入专业" >
 		</div>
 		<div class="form-group">
-			<label class="input-label">方向</label> <input name="direction" class="input-content" type="text" placeholder="请输入姓名" >
+			<label class="input-label">方向</label> 
+			<select class="select-content" name="direction">
+				<option value="Java" selected>Java开发</option>
+				<option value="大数据" >大数据</option>
+				<option value="软件测试" >软件测试</option>
+				<option value="Web前端" >Web前端</option>
+			</select> <i class="select-arrow"></i>
 		</div>
+		<!-- <div class="form-group">
+			<label class="input-label">方向</label> <input name="direction" class="input-content" type="text" placeholder="请输入" >
+		</div> -->
 		<div class="form-group">
 			<label class="input-label">技术</label> <input name="technology" class="input-content" type="text" placeholder="请输入技术" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" >
 		</div>
@@ -57,7 +66,6 @@
 				beforeSubmit : function(data, $form) {
 					var name = $form.find("input[name='name']");
 					var object = $form.find("input[name='object']");
-					var direction = $form.find("input[name='direction']");
 					var technology = $form.find("input[name='technology']");
 					var ability = $form.find("input[name='ability']");
 
@@ -71,12 +79,6 @@
 						return showInputTip(object, "请输入专业");
 					} else {
 						hideInputTip(object);
-					}
-					
-					if ($.trim(direction.val()) === "") {
-						return showInputTip(direction, "请输入方向");
-					} else {
-						hideInputTip(direction);
 					}
 					
 					if ($.trim(technology.val()) === "") {
